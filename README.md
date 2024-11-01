@@ -13,8 +13,6 @@ Welcome to the **Elistack**! This repository is built to offer a strong foundati
 
 - **[Radix UI](https://www.radix-ui.com/)**: A collection of unstyled, accessible components for React. Radix UI ensures your components are both accessible and customizable, providing a strong foundation for building polished UIs with flexibility.
 
-- **[ShadCN](https://shadcn.dev/)**: A collection of styled, accessible components built on Radix UI and Tailwind CSS. ShadCN combines Radix's accessibility with Tailwind's styling, allowing for a seamless integration of accessible, modern design elements.
-
 - **[Lucide React](https://lucide.dev/docs/lucide-react)**: An open-source icon library for React. Lucide React is designed with SVG-based icons that are easy to scale and style, helping you enhance UI elements with lightweight, customizable icons.
 
 - **[clsx](https://github.com/lukeed/clsx)**: A utility for conditionally joining class names in JavaScript. clsx is small, efficient, and ideal for managing complex class combinations in components.
@@ -55,7 +53,6 @@ Each library has been added to serve a specific purpose and can be further custo
 - **Framer Motion**: Adds smooth, interactive animations that improve the user experience.
 - **Tailwind CSS**: Empowers rapid styling with utility classes to streamline your design workflow.
 - **Radix UI**: Ensures accessible, unstyled components that can be fully customized to your design needs.
-- **ShadCN**: Provides Radix-based components styled with Tailwind CSS, perfect for a cohesive and modern UI.
 - **Lucide React**: A versatile icon set to visually enhance your app.
 - **clsx**: Helps manage dynamic class names in a clear and organized way.
 
