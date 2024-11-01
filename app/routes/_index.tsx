@@ -2,6 +2,9 @@ import type { MetaFunction } from "@remix-run/node";
 import directus from "~/lib/directus";
 import { readSingleton } from "@directus/sdk";
 import { useLoaderData } from "@remix-run/react";
+import Section from "~/components/ui/Section";
+import Container from "~/components/ui/Container";
+import HeadingText from "~/components/ui/HeadingText";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,5 +21,11 @@ export const loader = async () => {
 
 export default function Index() {
   const global = useLoaderData<typeof loader>();
-  return <h1 className="text-4xl font-light">{global.name}</h1>;
+  return (
+    <Section>
+      <Container>
+        <HeadingText level="h1">{global.name}</HeadingText>
+      </Container>
+    </Section>
+  );
 }
