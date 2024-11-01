@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
 export const loader = async () => {
   const global = await directus.request(readSingleton("general_settings"));
   console.log(global);
-  return global
+  return global;
 };
 
 export default function Index() {
