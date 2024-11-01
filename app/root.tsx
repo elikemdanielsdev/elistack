@@ -6,7 +6,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { Theme } from "@radix-ui/themes";
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -33,9 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
-        <Theme>
-          <main>{children}</main>
-        </Theme>
+        <main>{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>
