@@ -1,6 +1,6 @@
 # Elistack - Remix Starter Project
 
-Welcome to the **Elistack**! This repository is built to offer a strong foundation for your next web project. With a focus on interactivity, UI styling, iconography, and Directus CMS integration, this starter kit provides a modern and versatile setup to kickstart your web development with Remix and Directus.
+Welcome to the **Elistack**! This repository is built to offer a strong foundation for your next web project. With a focus on interactivity, UI styling, iconography, and Directus CMS integration, this starter kit provides a modern and versatile setup to kickstart your web development with Remix and Directus CMS.
 
 ## ✨ Features & Stack
 
