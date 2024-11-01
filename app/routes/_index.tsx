@@ -18,5 +18,5 @@ export const loader = async () => {
 
 export default function Index() {
   const global = useLoaderData<typeof loader>();
-  return <div>{global.name}</div>;
+  return <h1 className="text-4xl font-light">{global.name}</h1>;
 }
