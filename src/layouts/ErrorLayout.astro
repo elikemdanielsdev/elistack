@@ -1,0 +1,21 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "@fontsource-variable/inter";
+---
+
+<!doctype html>
+<html lang="en" class="smooth-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Page not found - Elistack</title>
+    <ClientRouter />
+  </head>
+  <body
+    class="font-inter-variable flex min-h-screen flex-col overflow-hidden antialiased"
+  >
+    <slot />
+  </body>
+</html>

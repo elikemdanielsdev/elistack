@@ -1,0 +1,25 @@
+---
+import { ClientRouter, fade } from "astro:transitions";
+import "@fontsource-variable/inter";
+---
+
+<!doctype html>
+<html lang="en" class="smooth-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Elistack</title>
+    <ClientRouter />
+  </head>
+  <body class="font-inter-variable flex min-h-screen flex-col antialiased">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/new">New</a>
+    </nav>
+    <main transition:animate={fade({ duration: "0.15s" })}>
+      <slot />
+    </main>
+  </body>
+</html>
