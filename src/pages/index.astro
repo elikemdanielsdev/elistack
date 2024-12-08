@@ -2,6 +2,7 @@
 import Layout from "@/layouts/MainLayout.astro";
 import { Banana, BadgeCheck } from "lucide-react";
 import { fade } from "astro:transitions";
+import Heading from "@/components/static/HeadingText.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -11,4 +12,7 @@ import { fade } from "astro:transitions";
   <BadgeCheck
     className="h-12 w-12 rounded-lg border border-dashed border-red-400 bg-red-50 p-2 text-red-500"
   />
+  <Heading tag="h1">Heading 1</Heading>
+  <Heading tag="h2">Heading 2</Heading>
+  <Heading tag="h3">Heading 3</Heading>
 </Layout>

@@ -1,0 +1,14 @@
+---
+import clsx from "clsx";
+
+type Props = {
+  tag?: "section" | "header" | "footer";
+  class?: string;
+};
+
+const { tag: Tag = "section", class: className } = Astro.props as Props;
+---
+
+<Tag class={clsx("px-[4%] py-24", className)}>
+  <slot />
+</Tag>

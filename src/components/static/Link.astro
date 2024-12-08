@@ -1,0 +1,15 @@
+---
+import clsx from "clsx";
+
+type Props = {
+  class?: string;
+  href: string;
+  target?: string;
+};
+
+const { href, target, class: className } = Astro.props as Props;
+---
+
+<a href={href} target={target} class={clsx(className)}>
+  <slot />
+</a>
