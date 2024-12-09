@@ -1,0 +1,40 @@
+---
+import clsx from "clsx";
+
+const weights = {
+  thin: "font-thin",
+  normal: "font-normal",
+  medium: "font-medium",
+  semibold: "font-semibold",
+  bold: "font-bold",
+  extrabold: "font-extrabold",
+};
+
+const sizes = {
+  xs: "text-xs",
+  sm: "text-sm",
+  base: "text-normal",
+  lg: "text-lg",
+  xl: "text-xl",
+  "2xl": "text-2xl",
+  "3xl": "text-3xl",
+  "4xl": "text-4xl",
+  "5xl": "text-5xl",
+};
+
+type Props = {
+  class?: string;
+  size?: keyof typeof sizes;
+  weight?: keyof typeof weights;
+};
+
+const {
+  size = sizes.base,
+  class: className,
+  weight = "normal",
+} = Astro.props as Props;
+---
+
+<p class={clsx(size, weights[weight], className)}>
+  <slot />
+</p>
