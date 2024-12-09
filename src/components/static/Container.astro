@@ -1,20 +1,21 @@
 ---
 import clsx from "clsx";
 
+const widths = {
+  "1400": "max-w-screen-1400",
+  "1200": "max-w-screen-1200",
+  "920": "max-w-screen-920",
+  "640": "max-w-screen-640",
+};
+
 type Props = {
   class?: string;
-  size?: keyof typeof sizes;
+  width?: keyof typeof widths;
 };
 
-const sizes = {
-  1400: "max-w-screen-1400",
-  920: "max-w-screen-920",
-  640: "max-w-screen-640",
-};
-
-const { size = "1400", class: className } = Astro.props as Props;
+const { width = "1400", class: className } = Astro.props as Props;
 ---
 
-<div class={clsx("mx-auto", sizes[size], className)}>
+<div class={clsx("mx-auto", widths[width], className)}>
   <slot />
 </div>
