@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import "@fontsource-variable/inter";
+import "@/styles/frontend.css";
 ---
 
 <!doctype html>
@@ -13,9 +13,7 @@ import "@fontsource-variable/inter";
     <title>Page not found - Elistack</title>
     <ClientRouter />
   </head>
-  <body
-    class="font-inter-variable flex min-h-screen flex-col overflow-hidden antialiased"
-  >
+  <body class="flex min-h-screen flex-col font-inter-variable antialiased">
     <slot />
   </body>
 </html>
