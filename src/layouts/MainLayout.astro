@@ -1,5 +1,6 @@
 ---
 import { ClientRouter, fade } from "astro:transitions";
+import { SEO } from "@/components/utilities";
 import "@/styles/frontend.css";
 ---
 
@@ -10,14 +11,15 @@ import "@/styles/frontend.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Elistack</title>
+    <SEO
+      title="Elistack"
+      description="A minimal Astro starter for building websites."
+      keywords={["astro", "astro starter", "astro template"]}
+      ogImage="/og-image.png"
+    />
     <ClientRouter />
   </head>
   <body class="flex min-h-screen flex-col font-inter-variable antialiased">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/new">New</a>
-    </nav>
     <main transition:animate={fade({ duration: "0.15s" })}>
       <slot />
     </main>

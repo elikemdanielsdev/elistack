@@ -1,0 +1,44 @@
+---
+type Props = {
+  title: string;
+  description?: string;
+  keywords?: string[];
+  ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  canonicalURL?: string;
+};
+
+const {
+  title,
+  description,
+  keywords,
+  ogImage,
+  ogTitle,
+  ogDescription,
+  canonicalURL,
+} = Astro.props as Props;
+---
+
+<meta charset="UTF-8" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords?.join(", ") || ""} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:image" content={ogImage} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@elikemdaniels" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />

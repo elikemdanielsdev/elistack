@@ -1,14 +1,15 @@
 ---
 import Layout from "@/layouts/MainLayout.astro";
-import { Heading, Section, Container } from "@/components/static";
+import { HeadingText, BodyText, Section, Container } from "@/components/static";
 
-const title = "Illusion Radiance 1860";
+const title = "Elistack";
 ---
 
 <Layout>
   <Section>
     <Container>
-      <Heading tag="h1">{title}</Heading>
+      <HeadingText tag="h1">{title}</HeadingText>
+      <BodyText> A minimal Astro starter for building websites. </BodyText>
     </Container>
   </Section>
 </Layout>
