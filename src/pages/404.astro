@@ -1,13 +1,23 @@
 ---
 import ErrorLayout from "@/layouts/ErrorLayout.astro";
 import { Section, Container, HeadingText, BodyText } from "@/components/static";
+
+const title = "404";
+const description = "Page not found";
+const ogTitle = title;
+const ogDescription = description;
 ---
 
-<ErrorLayout>
+<ErrorLayout
+  title={title}
+  description={description}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+>
   <Section>
     <Container>
-      <HeadingText tag="h1">404</HeadingText>
-      <BodyText>Page not found</BodyText>
+      <HeadingText tag="h1">{title}</HeadingText>
+      <BodyText>{description}</BodyText>
     </Container>
   </Section>
 </ErrorLayout>

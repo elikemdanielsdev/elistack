@@ -7,10 +7,13 @@ type Props = {
   title?: string;
   description?: string;
   keywords?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
 };
 
-const { title, description, keywords, ogImage } = Astro.props as Props;
+const { title, description, keywords, ogTitle, ogDescription, ogImage } =
+  Astro.props as Props;
 ---
 
 <!doctype html>
@@ -24,6 +27,8 @@ const { title, description, keywords, ogImage } = Astro.props as Props;
       title={title ? `${title} - Elistack` : "Elistack"}
       description={description}
       keywords={keywords}
+      ogTitle={ogTitle ? `${ogTitle} - Elistack` : "Elistack"}
+      ogDescription={ogDescription}
       ogImage={ogImage}
     />
     <ClientRouter />

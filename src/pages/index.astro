@@ -5,9 +5,17 @@ import { HeadingText, BodyText, Section, Container } from "@/components/static";
 const title = "Introduction";
 const description = "A minimal Astro starter for building websites.";
 const keywords = ["astro", "astro starter", "astro template"];
+const ogTitle = title;
+const ogDescription = description;
 ---
 
-<Layout title={title} description={description} keywords={keywords}>
+<Layout
+  title={title}
+  description={description}
+  keywords={keywords}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+>
   <Section>
     <Container>
       <HeadingText tag="h1">{title}</HeadingText>

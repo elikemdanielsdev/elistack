@@ -1,6 +1,19 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import { SEO } from "@/components/utilities";
 import "@/styles/frontend.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+};
+
+const { title, description, keywords, ogTitle, ogDescription, ogImage } =
+  Astro.props as Props;
 ---
 
 <!doctype html>
@@ -10,7 +23,14 @@ import "@/styles/frontend.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Page not found - Elistack</title>
+    <SEO
+      title={title ? `${title} - Elistack` : "Elistack"}
+      description={description}
+      keywords={keywords}
+      ogTitle={ogTitle ? `${ogTitle} - Elistack` : "Elistack"}
+      ogDescription={ogDescription}
+      ogImage={ogImage}
+    />
     <ClientRouter />
   </head>
   <body class="flex min-h-screen flex-col font-inter-variable antialiased">
