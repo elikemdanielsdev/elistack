@@ -2,6 +2,15 @@
 import { ClientRouter, fade } from "astro:transitions";
 import { SEO } from "@/components/utilities";
 import "@/styles/frontend.css";
+
+type Props = {
+  title: string;
+  description?: string;
+  keywords?: string[];
+  ogImage?: string;
+};
+
+const { title, description, keywords, ogImage } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -12,10 +21,10 @@ import "@/styles/frontend.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <SEO
-      title="Elistack"
-      description="A minimal Astro starter for building websites."
-      keywords={["astro", "astro starter", "astro template"]}
-      ogImage="/og-image.png"
+      title={title ? `${title} - Elistack` : "Elistack"}
+      description={description}
+      keywords={keywords}
+      ogImage={ogImage}
     />
     <ClientRouter />
   </head>
