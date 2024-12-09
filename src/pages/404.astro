@@ -1,7 +1,13 @@
 ---
 import ErrorLayout from "@/layouts/ErrorLayout.astro";
+import { Section, Container, HeadingText, BodyText } from "@/components/static";
 ---
 
 <ErrorLayout>
-  <h1>404</h1>
+  <Section>
+    <Container>
+      <HeadingText tag="h1">404</HeadingText>
+      <BodyText>Page not found</BodyText>
+    </Container>
+  </Section>
 </ErrorLayout>
