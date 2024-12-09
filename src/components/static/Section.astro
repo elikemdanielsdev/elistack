@@ -1,14 +1,26 @@
 ---
 import clsx from "clsx";
 
+const tags = {
+  section: "section",
+  header: "header",
+  footer: "footer",
+};
+
 type Props = {
-  tag?: "section" | "header" | "footer";
+  tag?: keyof typeof tags;
   class?: string;
 };
 
 const { tag: Tag = "section", class: className } = Astro.props as Props;
+
+const verticalPadding = {
+  section: "py-24",
+  header: "py-4",
+  footer: "py-32",
+}[Tag];
 ---
 
-<Tag class={clsx("px-[4%] py-24", className)}>
+<Tag class={clsx("px-[4%]", verticalPadding, className)}>
   <slot />
 </Tag>
